@@ -1,0 +1,32 @@
+[project]
+name = "gptq"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Luca-blue", email = "luca.samoyed.public@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.15.0",
+    "datasets>=5.2.0",
+    "gptqmodel>=7.0.0",
+    "optimum>=2.3.0",
+    "torch>=2.11.0",
+    "transformers>=5.23.0",
+]
+
+[project.scripts]
+gptq = "gptq:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

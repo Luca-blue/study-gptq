@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# モデルの重み（スクリプトで再生成・再ダウンロードできる）
+models/
+
+# 秘密の値（Hugging Face のトークンなど）
+.env
+
+# ツールのキャッシュ
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
